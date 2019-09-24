@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {{ govukHeader({
+    serviceName: serviceName,
+    containerClasses: "govuk-width-container app-apprentice-service-header"
+  }) }}
+
+<div class="das-account-header das-account-header--employer">
+  <div class="govuk-width-container">
+
+      <p class="das-account-header__title">User Name</p>
+      <nav class="das-user-navigation" id="das-user-navigation">
+          <ul class="das-user-navigation__list" role="menu">
+              <li role="menuitem" class="das-user-navigation__list-item">
+                  <a class="das-user-navigation__link" href="start">Sign out</a>
+              </li>
+          </ul>
+      </nav>
+  </div>
+</div>
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "dashboard"
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">Application overview</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <table class="govuk-table">
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Application reference</th>
+          <td class="govuk-table__cell">ATP0000001</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Registered name</th>
+          <td class="govuk-table__cell">Learnovate ltd</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Trading name</th>
+          <td class="govuk-table__cell">Learnovate</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Type of organisation</th>
+          <td class="govuk-table__cell">Professional body</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">UKPRN</th>
+          <td class="govuk-table__cell">2893347</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Company number</th>
+          <td class="govuk-table__cell">829374619</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Financial due date</th>
+          <td class="govuk-table__cell">12 March 2020</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Financial status</th>
+          <td class="govuk-table__cell">Passed</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+{% endblock %}

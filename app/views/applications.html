@@ -1,0 +1,279 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {{ govukHeader({
+    serviceName: serviceName,
+    containerClasses: "govuk-width-container app-apprentice-service-header"
+  }) }}
+
+<div class="das-account-header das-account-header--employer">
+  <div class="govuk-width-container">
+
+      <p class="das-account-header__title">User Name</p>
+      <nav class="das-user-navigation" id="das-user-navigation">
+          <ul class="das-user-navigation__list" role="menu">
+              <li role="menuitem" class="das-user-navigation__list-item">
+                  <a class="das-user-navigation__link" href="start">Sign out</a>
+              </li>
+          </ul>
+      </nav>
+  </div>
+</div>
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "dashboard"
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">Applications</h1>
+
+
+{%- from "govuk/components/table/macro.njk" import govukTable -%}
+
+
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#new">
+        New
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#in-progress">
+        In progress
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#feedback">
+        Feedback
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#approved">
+        Approved
+      </a>
+    </li>
+  </ul>
+
+  <section class="govuk-tabs__panel" id="new">
+    <h2 class="govuk-heading-l">New</h2>
+  <table class="govuk-table">
+		<thead class="govuk-table__head">
+			<tr class="govuk-table__row">
+				<th aria-sort="ascending" class="govuk-table__header" scope="col">Organisation</th>
+				<th aria-sort="none" class="govuk-table__header" scope="col">Financial status</th>
+				<th aria-sort="none" class="govuk-table__header" scope="col">Date submitted</th>
+			</tr>
+		</thead>
+		<tbody class="govuk-table__body">
+			<tr class="govuk-table__row">
+				<td class="govuk-table__cell"><a href="#">Level Up</a></td>
+				<td class="govuk-table__cell">Passed</td>
+				<td class="govuk-table__cell">22 September 2019</td>
+			</tr>
+			<tr class="govuk-table__row">
+				<td class="govuk-table__cell"><a href="#">Exam Snap</a></td>
+				<td class="govuk-table__cell">Passed</td>
+				<td class="govuk-table__cell">21 September 2019</td>
+			</tr>
+			<tr class="govuk-table__row">
+				<td class="govuk-table__cell"><a href="#">Think Pod</a></td>
+				<td class="govuk-table__cell">Exempt</td>
+				<td class="govuk-table__cell">19 September 2019</td>
+			</tr>
+			<tr class="govuk-table__row">
+				<td class="govuk-table__cell"><a href="#">Learn Forward</a></td>
+				<td class="govuk-table__cell">Passed</td>
+				<td class="govuk-table__cell">19 September 2019</td>
+			</tr>
+			<tr class="govuk-table__row">
+				<td class="govuk-table__cell"><a href="#">Smart Box</a></td>
+				<td class="govuk-table__cell">Passed</td>
+				<td class="govuk-table__cell">18 September 2019</td>
+			</tr>
+			<tr class="govuk-table__row">
+				<td class="govuk-table__cell"><a href="#">Stella Nova</a></td>
+				<td class="govuk-table__cell">Passed</td>
+				<td class="govuk-table__cell">18 September 2019</td>
+			</tr>
+		</tbody>
+	</table>
+  </section>
+
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="in-progress">
+    <h2 class="govuk-heading-l">In progress</h2>
+  <table class="govuk-table">
+		<thead class="govuk-table__head">
+			<tr class="govuk-table__row">
+				<th aria-sort="ascending" class="govuk-table__header" scope="col">Organisation</th>
+				<th aria-sort="none" class="govuk-table__header" scope="col">Financial status</th>
+				<th aria-sort="none" class="govuk-table__header" scope="col">Status</th>
+        <th aria-sort="none" class="govuk-table__header" scope="col">Date submitted</th>
+			</tr>
+		</thead>
+		<tbody class="govuk-table__body">
+			<tr class="govuk-table__row">
+				<td class="govuk-table__cell"><a href="#">Chrysalis</a></td>
+				<td class="govuk-table__cell">Passed</td>
+				<td class="govuk-table__cell">Resubmitted</td>
+        <td class="govuk-table__cell">22 September 2019</td>
+			</tr>
+			<tr class="govuk-table__row">
+				<td class="govuk-table__cell"><a href="#">Book Bot</a></td>
+				<td class="govuk-table__cell">Passed</td>
+        <td class="govuk-table__cell">Resubmitted</td>
+				<td class="govuk-table__cell">21 September 2019</td>
+			</tr>
+			<tr class="govuk-table__row">
+				<td class="govuk-table__cell"><a href="#">Knowtably</a></td>
+				<td class="govuk-table__cell">Exempt</td>
+        <td class="govuk-table__cell">Submitted</td>
+				<td class="govuk-table__cell">19 September 2019</td>
+			</tr>
+			<tr class="govuk-table__row">
+				<td class="govuk-table__cell"><a href="#">Moving the Grade</a></td>
+				<td class="govuk-table__cell">Passed</td>
+        <td class="govuk-table__cell">Submitted</td>
+				<td class="govuk-table__cell">19 September 2019</td>
+			</tr>
+			<tr class="govuk-table__row">
+				<td class="govuk-table__cell"><a href="#">Rocket Training</a></td>
+				<td class="govuk-table__cell">Passed</td>
+        <td class="govuk-table__cell">Submitted</td>
+				<td class="govuk-table__cell">18 September 2019</td>
+			</tr>
+			<tr class="govuk-table__row">
+				<td class="govuk-table__cell"><a href="#">Swing Start</a></td>
+				<td class="govuk-table__cell">Passed</td>
+        <td class="govuk-table__cell">Submitted</td>
+				<td class="govuk-table__cell">18 September 2019</td>
+			</tr>
+		</tbody>
+	</table>
+  </section>
+
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="feedback">
+    <h2 class="govuk-heading-l">Feedback</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th aria-sort="ascending" scope="col" class="govuk-table__header">Organisation</th>
+          <th aria-sort="none" scope="col" class="govuk-table__header">Financial status</th>
+          <th aria-sort="none" scope="col" class="govuk-table__header">Status</th>
+          <th aria-sort="none" scope="col" class="govuk-table__header">Date submitted</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Learnovate</a></td>
+          <td class="govuk-table__cell">Passed</td>
+          <td class="govuk-table__cell">Submitted</td>
+          <td class="govuk-table__cell">18 September 2019</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Guide and Grow</a></td>
+          <td class="govuk-table__cell">Passed</td>
+          <td class="govuk-table__cell">Submitted</td>
+          <td class="govuk-table__cell">18 September 2019</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Future Think</a></td>
+          <td class="govuk-table__cell">Passed</td>
+          <td class="govuk-table__cell">Resubmitted</td>
+          <td class="govuk-table__cell">16 September 2019</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Teach Academy</a></td>
+          <td class="govuk-table__cell">Passed</td>
+          <td class="govuk-table__cell">Submitted</td>
+          <td class="govuk-table__cell">15 September 2019</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="approved">
+    <h2 class="govuk-heading-l">Feedback</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th aria-sort="ascending" scope="col" class="govuk-table__header">Organisation</th>
+          <th aria-sort="none" scope="col" class="govuk-table__header">Financial status</th>
+          <th aria-sort="none" scope="col" class="govuk-table__header">Date approved</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Edusphere</a></td>
+          <td class="govuk-table__cell">Passed</td>
+          <td class="govuk-table__cell">12 September 2019</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">School Source</a></td>
+          <td class="govuk-table__cell">Exempt</td>
+          <td class="govuk-table__cell">2 September 2019</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Learnovate</a></td>
+          <td class="govuk-table__cell">Passed</td>
+          <td class="govuk-table__cell">28 August 2019</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</div>
+
+
+{% endblock %}
+
+{% block pageScripts %}
+<script>
+new MOJFrontend.SortableTable({
+table: [
+$('table')[0]
+]
+});
+
+new MOJFrontend.SortableTable({
+table: [
+$('table')[1]
+]
+});
+
+new MOJFrontend.SortableTable({
+table: [
+$('table')[2]
+]
+});
+
+new MOJFrontend.SortableTable({
+table: [
+$('table')[3]
+]
+});
+</script>
+{% endblock %}

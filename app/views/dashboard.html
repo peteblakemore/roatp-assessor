@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block header %}
+  {{ govukHeader({
+    serviceName: serviceName,
+    containerClasses: "govuk-width-container app-apprentice-service-header"
+  }) }}
+
+<div class="das-account-header das-account-header--employer">
+  <div class="govuk-width-container">
+
+      <p class="das-account-header__title">User Name</p>
+      <nav class="das-user-navigation" id="das-user-navigation">
+          <ul class="das-user-navigation__list" role="menu">
+              <li role="menuitem" class="das-user-navigation__list-item">
+                  <a class="das-user-navigation__link" href="start">Sign out</a>
+              </li>
+          </ul>
+      </nav>
+  </div>
+</div>
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">Account home</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <div>
+      <h2 class="govuk-heading-m">Assess applications</h2>
+      <p class="govuk-body">Review and approve new organisation applications, check on progress, send and receive feedback.</p>
+      <ul class="govuk-list">
+        <li><a class="govuk-link--no-visited-state" href="applications">New</a></li>
+        <li><a class="govuk-link--no-visited-state" href="applications">In progress</a></li>
+        <li><a class="govuk-link--no-visited-state" href="applications">Feedback</a></li>
+        <li><a class="govuk-link--no-visited-state" href="applications">Approved</a></li>
+        <li><a class="govuk-link--no-visited-state" href="applications">Rejected</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-half">
+    <div>
+      <h2 class="govuk-heading-m">Manage register</h2>
+      <p class="govuk-body">Search, view and edit organisations that are currently live on the register.</p>
+      <ul class="govuk-list">
+        <li><a class="govuk-link--no-visited-state" href="#">Search</a></li>
+        <li><a class="govuk-link--no-visited-state" href="#">Add</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
