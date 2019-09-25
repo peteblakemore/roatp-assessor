@@ -35,7 +35,7 @@
 
 {{ govukBackLink({
   text: "Back",
-  href: "dashboard"
+  href: "applications"
 }) }}
 
 {% endblock %}
@@ -84,6 +84,34 @@
         </tr>
       </tbody>
     </table>
+
+    <ul class="app-stage">
+      <li>
+          <h2 class="govuk-heading-m"><a class="govuk-link--no-visited-state" href="organisation-details">Organisation details</a></h2>
+          <span id="org-details-hint" class="govuk-hint">
+            13 of 13 questions completed
+          </span>
+
+
+          <strong class="govuk-tag" id="organisation-evaluated">Evaluated</strong>
+      </li>
+      <li>
+          <h2 class="govuk-heading-m"><a class="govuk-link--no-visited-state" href="#">Declarations</a></h2>
+          <span id="org-details-hint" class="govuk-hint">
+            21 of 21 questions completed
+          </span>
+          <strong class="govuk-tag" id="organisation-evaluated">Evaluated</strong>
+          <strong class="govuk-tag" id="organisation-evaluated">Feedback received</strong>
+      </li>
+      <li>
+          <h2 class="govuk-heading-m"><a class="govuk-link--no-visited-state" href="#">Financial health assessment</a></h2>
+          <span id="org-details-hint" class="govuk-hint">
+            1 of 1 questions completed
+          </span>
+          <strong class="govuk-tag" id="organisation-evaluated">Evaluated</strong>
+      </li>
+    </ul>
+
   </div>
 </div>
 

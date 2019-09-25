@@ -1,0 +1,218 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "application-overview"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-4">
+    <h1 class="govuk-heading-xl">Organisation details</h1>
+    <table class="govuk-table">
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Application reference</th>
+          <td class="govuk-table__cell">ATP0000001</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Registered name</th>
+          <td class="govuk-table__cell">Learnovate Ltd</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <!-- <h2 class="govuk-heading-m">Application questions</h2> -->
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Trading name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body govuk-!-font-weight-bold">Does your organisation have a trading name?</p>
+            <p class="govuk-body govuk-!-font-weight-regular">Does your organisation have a trading name?</p>
+            <br>
+            <p class="govuk-body govuk-!-font-weight-bold">What is your trading name?</p>
+            <p class="govuk-body govuk-!-font-weight-regular">Learnovate</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Add feedback
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name to use on the register
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body govuk-!-font-weight-bold">Do you want to use your trading name on the register?</p>
+            <p class="govuk-body govuk-!-font-weight-regular">Yes</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Add feedback
+              <span class="govuk-visually-hidden">Name to use on the register</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Contact details
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body govuk-!-font-weight-bold">Full name</p>
+            <p class="govuk-body govuk-!-font-weight-regular">John Smith</p>
+            <br>
+            <p class="govuk-body govuk-!-font-weight-bold">Address</p>
+            <p class="govuk-body govuk-!-font-weight-regular">23 Acacia Avenue, Coventry</p>
+            <br>
+            <p class="govuk-body govuk-!-font-weight-bold">Postcode</p>
+            <p class="govuk-body govuk-!-font-weight-regular">CV1 2AN</p>
+            <br>
+            <p class="govuk-body govuk-!-font-weight-bold">Email address</p>
+            <p class="govuk-body govuk-!-font-weight-regular">john.smith@learnovate.com</p>
+            <br>
+            <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+            <p class="govuk-body govuk-!-font-weight-regular">024 3841 7362</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Add feedback
+              <span class="govuk-visually-hidden">Contact details</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Contract notice contact details
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body govuk-!-font-weight-bold">Full name</p>
+            <p class="govuk-body govuk-!-font-weight-regular">John Smith</p>
+            <br>
+            <p class="govuk-body govuk-!-font-weight-bold">Address</p>
+            <p class="govuk-body govuk-!-font-weight-regular">23 Acacia Avenue, Coventry</p>
+            <br>
+            <p class="govuk-body govuk-!-font-weight-bold">Postcode</p>
+            <p class="govuk-body govuk-!-font-weight-regular">CV1 2AN</p>
+            <br>
+            <p class="govuk-body govuk-!-font-weight-bold">Email address</p>
+            <p class="govuk-body govuk-!-font-weight-regular">john.smith@learnovate.com</p>
+            <br>
+            <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+            <p class="govuk-body govuk-!-font-weight-regular">024 3841 7362</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Add feedback
+              <span class="govuk-visually-hidden">Contract notice contact details</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Further detail of incident
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body govuk-!-font-weight-bold">Date of incident</p>
+            <p class="govuk-body govuk-!-font-weight-regular">2 February 1995</p>
+            <br>
+            <p class="govuk-body govuk-!-font-weight-bold">Brief summary</p>
+            <p class="govuk-body govuk-!-font-weight-regular">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.</p>
+            <br>
+            <p class="govuk-body govuk-!-font-weight-bold">Any outstanding court action or legal proceedings?</p>
+            <p class="govuk-body govuk-!-font-weight-regular">No</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Add feedback
+              <span class="govuk-visually-hidden">Further detail of incident</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Registered charity
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body govuk-!-font-weight-bold">Is your organisation a registered charity?</p>
+            <p class="govuk-body govuk-!-font-weight-regular">No</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Add feedback
+              <span class="govuk-visually-hidden">Registered charity</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Register of removed trustees
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body govuk-!-font-weight-bold">Register of removed trustees</p>
+            <p class="govuk-body govuk-!-font-weight-regular">Yes</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Add feedback
+              <span class="govuk-visually-hidden">Register of removed trustees</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+
+      <form action="/form-handler" method="post" novalidate>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h2 class="govuk-fieldset__heading">
+                  Is this section complete?
+                </h2>
+              </legend>
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="is-section-complete" name="is-section-complete" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="is-section-complete">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="is-section-complete-2" name="is-section-complete" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="is-section-complete-2">
+                    No
+                  </label>
+                </div>
+
+              </div>
+            </fieldset>
+          </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Save
+          </button>
+          <p class="govuk-body"><a href="#" class="govuk-link">Return to application overview</a></p>
+        </form>
+
+    </div>
+  </div>
+{% endblock %}
