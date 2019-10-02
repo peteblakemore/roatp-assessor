@@ -2,6 +2,30 @@
   background-color: grey;
 }
 
+.govuk-tag-green {
+  background-color: #85994b;
+}
+
+.govuk-tag-red {
+  background-color: #d4351c;
+}
+
 .feedback-section {
   background-color: grey;
+}
+
+.app-task-list__no-padding  {
+  padding-left: 0;
+}
+
+.row-highlight  {
+  background-color: #ffdd00;
+}
+
+.app-task-list__task-match  {
+  background-color: red;
+}
+
+.table-margin  {
+  margin-bottom: 65px;
 }

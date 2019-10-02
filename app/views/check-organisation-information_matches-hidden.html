@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {{ govukHeader({
+    serviceName: serviceName,
+    containerClasses: "govuk-width-container app-apprentice-service-header"
+  }) }}
+
+<div class="das-account-header das-account-header--employer">
+  <div class="govuk-width-container">
+
+      <p class="das-account-header__title">User Name</p>
+      <nav class="das-user-navigation" id="das-user-navigation">
+          <ul class="das-user-navigation__list" role="menu">
+              <li role="menuitem" class="das-user-navigation__list-item">
+                  <a class="das-user-navigation__link" href="start">Sign out</a>
+              </li>
+          </ul>
+      </nav>
+  </div>
+</div>
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back to organisation details",
+  href: "application-overview"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Organisation details
+    </h1>
+
+    <!-- <p class="govuk-body">There are Mismatchs between the answers the applicant provided, and those stored on record. You must contact the applicant and ask them to resolve the Mismatchs.</p> -->
+
+
+  </div>
+  <div class="govuk-grid-column-full">
+    <!-- <h2 class="govuk-heading-m">
+      Mismatchs
+    </h2> -->
+
+    <table class="govuk-table">
+      <!-- <caption class="govuk-table__caption govuk-heading-m">Mismatches</caption> -->
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Question</th>
+          <th scope="col" class="govuk-table__header">Applicant answer</th>
+          <th scope="col" class="govuk-table__header">HMRC record</th>
+          <th scope="col" class="govuk-table__header"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Legal name</th>
+          <td class="govuk-table__cell">Learnovate ltd</td>
+          <td class="govuk-table__cell">Learnovate training ltd</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag-red">Mismatch</strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Trading name</th>
+          <td class="govuk-table__cell">Learnovate</td>
+          <td class="govuk-table__cell">Learnovate training</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag-red">Mismatch</strong></td>
+        </tr>
+        <!-- <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Business address</th>
+          <td class="govuk-table__cell">1 Romford Road<br>Wellington<br>Telford<br>CV16 6BB</td>
+          <td class="govuk-table__cell">1 Romford Road<br>Wellington<br>Telford<br>CV16 6BB</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag ">Match</strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Website</th>
+          <td class="govuk-table__cell">www.learnovate.com</td>
+          <td class="govuk-table__cell">www.learnovate.com</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag ">Match</strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Organisation type</th>
+          <td class="govuk-table__cell">Sole trader or partnership</td>
+          <td class="govuk-table__cell">Sole trader or partnership</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag ">Match</strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Company number</th>
+          <td class="govuk-table__cell">09234854</td>
+          <td class="govuk-table__cell">09234854</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag ">Match</strong></td>
+        </tr> -->
+      </tbody>
+    </table>
+    <p class="govuk-body"><a href="#">Show all answers including matches</a></p>
+<br>
+</div>
+
+<div class="govuk-grid-column-two-thirds">
+<h2 class="govuk-heading-m">
+  Request clarification
+</h2>
+
+
+<div class="govuk-form-group">
+  <p class="govuk-body">Some of the information provided by the applicant does not match the information held on record.</p>
+  <p class="govuk-body">The applicant must update their application before this section can be approved.</p>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+<button class="govuk-button" data-module="govuk-button">
+  Request clarification
+</button>
+
+  </div>
+</div>
+{% endblock %}

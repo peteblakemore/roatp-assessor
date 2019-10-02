@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {{ govukHeader({
+    serviceName: serviceName,
+    containerClasses: "govuk-width-container app-apprentice-service-header"
+  }) }}
+
+<div class="das-account-header das-account-header--employer">
+  <div class="govuk-width-container">
+
+      <p class="das-account-header__title">User Name</p>
+      <nav class="das-user-navigation" id="das-user-navigation">
+          <ul class="das-user-navigation__list" role="menu">
+              <li role="menuitem" class="das-user-navigation__list-item">
+                  <a class="das-user-navigation__link" href="start">Sign out</a>
+              </li>
+          </ul>
+      </nav>
+  </div>
+</div>
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back to application overview",
+  href: "application-overview"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Organisation details
+    </h1>
+
+    <ol class="app-task-list">
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">1. </span> Check information validity
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="check-organisation-information" aria-describedby="eligibility-completed">
+                Check organisation information
+              </a>
+            </span>
+            <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">Completed</strong>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="read-declaration-completed">
+                Check persons of significant control information
+              </a>
+            </span>
+            <strong class="govuk-tag app-task-list__task-completed" id="read-declaration-completed">Completed</strong>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">2. </span> Assess answers
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="company-information-completed">
+                Organisation information
+              </a>
+            </span>
+            <!-- <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong> -->
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="contact-details-completed">
+                Describe your organisation
+              </a>
+            </span>
+            <!-- <strong class="govuk-tag app-task-list__task-completed" id="contact-details-completed">Completed</strong> -->
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#">
+                Experience and accreditations
+              </a>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+  </div>
+</div>
+{% endblock %}
