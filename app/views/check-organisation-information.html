@@ -63,7 +63,7 @@
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header">Question</th>
           <th scope="col" class="govuk-table__header">Applicant answer</th>
-          <th scope="col" class="govuk-table__header">HMRC record</th>
+          <th scope="col" class="govuk-table__header">UKRLP record</th>
           <th scope="col" class="govuk-table__header"></th>
         </tr>
       </thead>
@@ -83,13 +83,13 @@
       </tbody>
     </table>
 
-    <!-- <table class="govuk-table">
+    <table class="govuk-table" id="matched-answers">
       <caption class="govuk-table__caption govuk-heading-m">Four answers match</caption>
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header">Question</th>
           <th scope="col" class="govuk-table__header">Applicant answer</th>
-          <th scope="col" class="govuk-table__header">HMRC record</th>
+          <th scope="col" class="govuk-table__header">UKRLP record</th>
           <th scope="col" class="govuk-table__header"></th>
         </tr>
       </thead>
@@ -119,9 +119,13 @@
           <td class="govuk-table__cell"><strong class="govuk-tag ">Match</strong></td>
         </tr>
       </tbody>
-    </table> -->
-    <p class="govuk-body"><a href="#">Show all answers</a></p>
-<br>
+    </table>
+
+
+    <p class="govuk-body">
+      <a href="#" onclick="toggle_visibility('matched-answers');">Show all answers</a>
+    </p>
+
 </div>
 
 <div class="govuk-grid-column-two-thirds">
@@ -139,4 +143,15 @@
 
   </div>
 </div>
+
+<script>
+function toggle_visibility(id) {
+     var e = document.getElementById(id);
+     if(e.style.display == 'block')
+        e.style.display = 'none';
+     else
+        e.style.display = 'block';
+  }
+</script>
+
 {% endblock %}
