@@ -83,7 +83,7 @@
       </tbody>
     </table>
 
-    <table class="govuk-table" id="matched-answers">
+    <table class="govuk-table">
       <caption class="govuk-table__caption govuk-heading-m">Four answers match</caption>
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
@@ -123,7 +123,7 @@
 
 
     <p class="govuk-body">
-      <a href="#" onclick="toggle_visibility('matched-answers');">Show all answers</a>
+      <a href="#">Show all answers</a>
     </p>
 
 </div>
@@ -143,15 +143,5 @@
 
   </div>
 </div>
-
-<script>
-function toggle_visibility(id) {
-     var e = document.getElementById(id);
-     if(e.style.display == 'block')
-        e.style.display = 'none';
-     else
-        e.style.display = 'block';
-  }
-</script>
 
 {% endblock %}
